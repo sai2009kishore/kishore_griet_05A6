@@ -40,9 +40,9 @@ public class Main
 
 		System.out.println();
 
-		Student temp = new Student(100, "Kishore", format.parse("10/10/1996"), 10.44);
+		Student temp = new Student(10, "Sai", format.parse("10/10/1996"), 90.1);
 
-		sg.remove(4);
+		sg.remove(temp);
 
 		ret = sg.getStudents();
 

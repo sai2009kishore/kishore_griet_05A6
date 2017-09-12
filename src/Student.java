@@ -77,8 +77,12 @@ public class Student implements Comparable {
 	}
 
 	@Override
-	public boolean equals(Object obj) {
-		return super.equals(obj);
+	public boolean equals(Object obj) 
+	{
+		Student s = (Student)obj;
+		if(this.getId()==s.getId() && this.getFullName().equals(s.getFullName()) && this.getBirthDate().equals(s.getBirthDate()) && this.getAvgMark()==s.getAvgMark())
+			return true;
+		return false;
 	}
 	
 	
