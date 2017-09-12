@@ -255,7 +255,7 @@ public class StudentGroup implements StudentArrayOperation {
 		if(student == null)
 			throw new IllegalArgumentException("Illegal");
 		int pos = 0;
-		for(int i=0;i<student.length;i++)
+		for(int i=0;i<students.length;i++)
 			if(students[i].equals(student))
 			{
 				pos = i;
