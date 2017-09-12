@@ -261,7 +261,6 @@ public class StudentGroup implements StudentArrayOperation {
 				pos = i;
 				break;
 			}
-		if(pos!=students.length-1)
 			return students[pos+1];
 	}
 }
