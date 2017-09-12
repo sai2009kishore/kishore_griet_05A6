@@ -42,7 +42,7 @@ public class Main
 
 		Student temp = new Student(10, "Sai", format.parse("10/10/1996"), 90.1);
 
-		sg.removeFromIndex(3);
+		sg.removeToIndex(2);
 
 		ret = sg.getStudents();
 

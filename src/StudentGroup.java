@@ -162,15 +162,22 @@ public class StudentGroup implements StudentArrayOperation {
 				pos = i;
 				break;
 			}
-		Student temp[] = new Student[students.length-pos];
+		Student temp[] = new Student[pos+1];
 		for(int i=0;i<=pos;i++)
 			temp[i] = students[i];
 		students = temp;
 	}
 
 	@Override
-	public void removeToIndex(int index) {
-		// Add your implementation here
+	public void removeToIndex(int index) 
+	{
+		if(index<0 || index>=students.length)
+			throw new IllegalArgumentException("Illegal value");
+		Student temp[] = new Student[students.length-index];
+		int count = 0;
+		for(int i=index;i<students.length;i++)
+			temp[count++] = students[i];
+		students = temp;
 	}
 
 	@Override
