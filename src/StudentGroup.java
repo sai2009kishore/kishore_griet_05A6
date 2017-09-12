@@ -182,7 +182,21 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void removeToElement(Student student) {
-		// Add your implementation here
+		if(student == null)
+			throw new IllegalArgumentException("Null Value");
+		int pos = 0;
+		for(int i=0;i<students.length;i++)
+			if(students[i].equals(student))
+			{
+				pos = i;
+				break;
+			}
+		Student temp[] = new Student[students.length-pos];
+		int count = 0;
+		for(int i=pos;i<students.length;i++)
+			temp[count++] = students[i];
+		students = temp;
+		
 	}
 
 	@Override

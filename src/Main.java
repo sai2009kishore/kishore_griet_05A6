@@ -25,8 +25,8 @@ public class Main
 			s[i] = new Student(id, name, date, avg);
 		}
 */
-		s[0] = new Student(10, "Sai", format.parse("10/10/1996"), 90.1);
-		s[1] = new Student(20, "Sai", format.parse("11/10/1996"), 90.1);
+		s[1] = new Student(10, "Sai", format.parse("10/10/1996"), 90.1);
+		s[0] = new Student(20, "Sai", format.parse("11/10/1996"), 90.1);
 		s[2] = new Student(30, "Sai", format.parse("12/10/1996"), 90.1);
 		s[3] = new Student(40, "Sai", format.parse("13/10/1996"), 90.1);
 		s[4] = new Student(50, "Sai", format.parse("14/10/1996"), 90.1);
@@ -42,7 +42,7 @@ public class Main
 
 		Student temp = new Student(10, "Sai", format.parse("10/10/1996"), 90.1);
 
-		sg.removeToIndex(2);
+		sg.removeToElement(temp);
 
 		ret = sg.getStudents();
 
