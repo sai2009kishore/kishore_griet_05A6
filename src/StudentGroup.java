@@ -220,7 +220,8 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) {
+	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) 
+	{
 		return null;
 	}
 
@@ -249,8 +250,18 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 	@Override
-	public Student getNextStudent(Student student) {
-		// Add your implementation here
-		return null;
+	public Student getNextStudent(Student student) 
+	{
+		if(student == null)
+			throw new IllegalArgumentException("Illegal");
+		int pos = 0;
+		for(int i=0;i<student.length;i++)
+			if(students[i].equals(student))
+			{
+				pos = i;
+				break;
+			}
+		if(pos!=students.length-1)
+			return students[pos+1];
 	}
 }
